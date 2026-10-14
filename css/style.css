@@ -1,0 +1,426 @@
+/*1. VARIABLES Y RESET*/
+:root {
+    --color-bg: #FAFAFA; 
+    --color-text: #2C2C2C; 
+    --color-accent: #D4AF37; 
+    --color-primary: #1A1A1A; 
+    --color-light-gray: #F0F0F0; 
+
+    /* Tipografías */
+    --font-heading: 'Playfair Display', serif; 
+    --font-body: 'Montserrat', sans-serif; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; 
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+/* 2. NAVEGACIÓN (HEADER) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 5%;
+    background-color: rgba(255, 255, 255, 0.95); 
+    backdrop-filter: blur(5px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-links a:hover {
+    color: var(--color-accent);
+}
+
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    min-width: 200px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 1rem 0;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    padding: 0.5rem 1.5rem;
+}
+
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.icon-login {
+    color: var(--color-text);
+    display: flex;
+    align-items: center;
+}
+
+.icon-login:hover {
+    color: var(--color-accent);
+}
+
+/* 3. BOTONES */
+.btn {
+    padding: 0.8rem 1.8rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-accent);
+    color: #fff;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.btn-outline:hover {
+    background-color: #fff;
+    color: var(--color-primary);
+}
+
+/* 4. SECCIÓN HERO (BANNER) */
+.hero-section {
+    height: 80vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), #333; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 20px;
+}
+
+.hero-content h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    font-weight: 300;
+}
+
+/* 5. SECCIÓN NUESTRA ESENCIA (ABOUT) */
+.about-section {
+    padding: 5rem 5%;
+    text-align: center;
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-section h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-primary);
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #555;
+}
+
+/* 6. SECCIÓN SERVICIOS (GRID) */
+.services-section {
+    padding: 5rem 5%;
+    background-color: var(--color-light-gray);
+    text-align: center;
+}
+
+.services-section h3 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 2rem;
+}
+
+.service-card {
+    background-color: #fff;
+    padding-bottom: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.placeholder-img {
+    height: 250px;
+    background-color: #ddd; 
+    margin-bottom: 1.5rem;
+}
+
+.service-card h4 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.link-more {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* 7. FOOTER */
+footer {
+    background-color: var(--color-primary);
+    color: #fff;
+    padding: 4rem 5% 2rem;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-col h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--color-accent);
+}
+
+.footer-col p {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-bottom: 0.5rem;
+}
+
+.social-links {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: var(--color-accent);
+    color: #fff;
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.8rem;
+    color: #aaa;
+}
+
+/*8. RESPONSIVE DESIGN (Básico)*/
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+    
+    .footer-container {
+        flex-direction: column;
+    }
+}
+
+/* AJUSTES PARA LA SECCION HERO Y MARCAS */
+
+/* 1. Subtitulo */
+.hero-subtitule {
+    display: block;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--color-accent);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+/* 2. Alineacion y separación de los botones */
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+/* 3. Contenedor de las marcas de confianza */
+.trusted-brands {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 2rem;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.trusted-brands p {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #b3b3b3;
+    margin-bottom: 1.5rem;
+}
+
+/* 4. Separación de los nombres de las marcas */
+.brands-name {
+    display:flex;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.brands-name span {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    color: #fff;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.brands-name span:hover {
+    opacity: 1;
+    cursor: default;
+}
+
+/* ESTILOS PARA LAS IMAGENES DE SERVICIOS */
+.service-img {
+    width: 100%;
+    height: 320px; 
+    overflow: hidden; 
+    border-radius: 4px; 
+    margin-bottom: 1.5rem;
+}
+
+.service-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transition: transform 0.6s ease; 
+}
+
+.service-card:hover .service-img img {
+    transform: scale(1.08); 
+}
+
+.service-card {
+    background-color: transparent; 
+    padding-bottom: 2rem;
+    cursor: pointer; 
+}
+
+.service-card h4 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
