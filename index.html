@@ -22,7 +22,6 @@
         <nav>
             <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="#about">El Salón</a></li>
                 <!-- Ejemplo de un item con submenú (Dropdown) -->
                 <li class="dropdown">
                     <a href="#servicios">Servicios</a>
@@ -35,7 +34,7 @@
                 <li><a href="#lookbook">Lookbook</a></li>
                 <li><a href="#boutique">Boutique</a></li>
                 <li><a href="#contacto">Contacto</a></li>
-                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
             </ul>
         </nav>
         <div class="nav-actions">
@@ -146,5 +145,10 @@
             <p>&copy; 2026 Glow & Style. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <!-- Scripts de Supabase (orden importante: librería → config → auth) -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase.js"></script>
+    <script src="js/auth.js"></script>
 </body>
 </html>

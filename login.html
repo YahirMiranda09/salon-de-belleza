@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+    <title>Iniciar Sesión | Glow & Style</title>
+</head>
+<body>
+    <div class="auth-container">
+        <a href="index.html" class="auth-logo">
+            <h1>Glow & Style</h1>
+        </a>
+        <form id="form-login" class="auth-form">
+            <h2>Iniciar Sesión</h2>
+            <p class="auth-subtitle">Bienvenida de nuevo</p>
+            <div class="form-group">
+                <label for="login-email">Correo Electrónico</label>
+                <input 
+                    type="email" 
+                    id="login-email" 
+                    placeholder="tu@correo.com" 
+                    required
+                >
+            </div>
+            <div class="form-group">
+                <label for="login-password">Contraseña</label>
+                <input 
+                    type="password" 
+                    id="login-password" 
+                    placeholder="Tu contraseña" 
+                    minlength="6" 
+                    required
+                >
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Iniciar Sesión</button>
+            <p class="auth-switch">
+                ¿No tienes cuenta? 
+                <a href="#" onclick="mostrarRegistro()">Crear cuenta</a>
+            </p>
+        </form>
+
+        <form id="form-registro" class="auth-form" style="display: none;">
+            <h2>Crear Cuenta</h2>
+            <p class="auth-subtitle">Únete a Glow & Style</p>
+
+            <div class="form-group">
+                <label for="reg-nombre">Nombre</label>
+                <input type="text" id="reg-nombre" placeholder="Tu nombre" required>
+            </div>
+
+            <div class="form-group">
+                <label for="reg-apellido-p">Apellido Paterno</label>
+                <input type="text" id="reg-apellido-p" placeholder="Apellido paterno" required>
+            </div>
+
+            <div class="form-group">
+                <label for="reg-apellido-m">Apellido Materno</label>
+                <input type="text" id="reg-apellido-m" placeholder="Apellido materno">
+            </div>
+
+            <div class="form-group">
+                <label for="reg-telefono">Teléfono</label>
+                <input type="tel" id="reg-telefono" placeholder="+52 ..." required>
+            </div>
+
+            <div class="form-group">
+                <label for="reg-email">Correo Electrónico</label>
+                <input type="email" id="reg-email" placeholder="tu@correo.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="reg-password">Contraseña</label>
+                <input type="password" id="reg-password" placeholder="Mínimo 6 caracteres" minlength="6" required>
+            </div>
+
+            <div class="form-group">
+                <label for="reg-password-confirm">Confirmar Contraseña</label>
+                <input type="password" id="reg-password-confirm" placeholder="Repite tu contraseña" minlength="6" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full">Crear Cuenta</button>
+
+            <p class="auth-switch">
+                ¿Ya tienes cuenta? 
+                <a href="#" onclick="mostrarLogin()">Iniciar sesión</a>
+            </p>
+        </form>
+
+    </div>
+</body>
+</html>
