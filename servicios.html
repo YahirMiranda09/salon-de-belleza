@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/servicios.css">
+    <title>Servicios | YADI ESTUDIO</title>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <h1>YADY ESTUDIO</h1>
+                <span class="subtitle">Tu salón exclusivo en el centro de la ciudad</span>
+            </a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li class="dropdown">
+                    <a href="servicios.html">Servicios</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="servicios.html#corte-dama">CORTE DE DAMA</a></li>
+                        <li><a href="servicios.html#rayos">RAYOS</a></li>
+                        <li><a href="servicios.html#mechas">MECHAS</a></li>
+                        <li><a href="servicios.html#tratamientos">TRATAMIENTOS CAPILARES</a></li>
+                        <li><a href="servicios.html#tintes">TINTES</a></li>
+                        <li><a href="servicios.html#depilaciones">DEPILACIONES</a></li>
+                        <li><a href="servicios.html#pedicure">PEDICURE</a></li>
+                        <li><a href="servicios.html#maquillaje">DISEÑO DE MAQUILLAJE</a></li>
+                        <li><a href="servicios.html#peinados">PEINADOS PARA OCASIONES ESPECIALES</a></li>
+                    </ul>
+                </li>
+                <li><a href="#lookbook">Lookbook</a></li>
+                <li><a href="#boutique">Boutique</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+            </ul>
+        </nav>
+        <div class="nav-actions">
+            <a href="login.html" class="icon-login" aria-label="Iniciar Sesión">
+                <!-- SVG de un icono de usuario simple -->
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            </a>
+            <a href="#reservar" class="btn btn-primary">Reservar Cita</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Banner de la página de servicios -->
+    <section class="servicios-hero">
+        <div class="servicios-hero-content">
+            <h2>Nuestro Menú de Servicios</h2>
+            <p>Déjate consentir por nuestros expertos con productos de alta gama.</p>
+        </div>
+    </section>
+
+    <!-- Categoría 1: Cabello (Corte, Color y Tratamientos) -->
+    <section class="servicio-categoria container">
+        <h3 class="categoria-titulo">Corte, Color & Tratamientos</h3>
+        <div class="servicios-grid">
+
+            <!-- Tarjeta de corte -->
+            <div id="corte-dama" class="servicio-item">
+                <img src="img/corte-dama.jpg" alt="Corte de Dama">
+                <div class="servicio-info">
+                    <h4>Corte de Dama</h4>
+                    <p>Diseño de imagen personalizado según tus facciones y estilo de vida.</p>
+                    <span class="precio">Desde $350</span>
+                    <a href="#reservar" class="btn-reservar">Agendar</a>
+                    <!-- Enlaces para whatsapp para cada servicio -->
+                    <!-- <a href="https://wa.me/527153050047?text=Hola%20Yadi%20Estudio,%20me%20gustar%C3%ADa%20agendar%20una%20cita%20para%20un%20Corte%20de%20Dama." target="_blank" rel="noopener noreferrer" class="btn-reservar">Agendar</a> -->
+                </div>
+            </div>
+            
+            <!-- Tarjeta de mechas -->
+            <div id="mechas" class="servicio-item">
+                <img src="img/mechas.jpg" alt="Mechas">
+                <div class="servicio-info">
+                    <h4>Mechas</h4>
+                    <p>Técnicas en tendencia para iluminar tu rostro con productos A.V.Y.N.A.</p>
+                    <span class="precio">Previa valoración</span>
+                    <a href="#reservar" class="btn-reservar">Agendar</a>
+                </div>
+            </div>
+
+            <!-- Tarjeta de Rayos -->
+            <div id="rayos" class="servicio-item">
+                <img src="img/rayos.jpg" alt="Rayos">
+                <div class="servicio-info">
+                    <h4>Rayos</h4>
+                    <p>Iluminación sutil y elegante para darle dimensión a tu cabello.</p>
+                    <span class="precio">Previa valoración</span>
+                    <a href="#reservar" class="btn-reservar">Agendar</a>
+                </div>
+            </div>
+
+            <!-- Tarjeta de Tintes -->
+            <div id="tintes" class="servicio-item">
+                <img src="img/tintes.jpg" alt="Tintes">
+                <div class="servicio-info">
+                    <h4>Tintes</h4>
+                    <p>Coloración profesional con máxima cobertura y cuidado de la hebra capilar.</p>
+                    <span class="precio">Desde $600</span>
+                    <a href="#reservar" class="btn-reservar">Agendar</a>
+                </div>
+            </div>
+
+            <!-- Tarjeta de Tratamientos -->
+            <div id="tratamientos" class="servicio-item">
+                <img src="img/tratamientos.jpg" alt="Tratamientos Capilares">
+                <div class="servicio-info">
+                    <h4>Tratamientos Capilares</h4>
+                    <p>Restauración profunda, hidratación y brillo para cabellos procesados.</p>
+                    <span class="precio">Desde $450</span>
+                    <a href="#reservar" class="btn-reservar">Agendar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categoría 2: Maquillaje y Peinado -->
+    <section class="servicio-categoria container">
+        <h3 class="categoria-titulo">Maquillaje & Peinado</h3>
+        <div class="servicios-grid">
+            
+            <!-- Tarjeta de Maquillaje (ID movido aquí) -->
+            <div id="maquillaje" class="servicio-item">
+                <img src="img/maquillaje-pro.jpg" alt="Maquillaje Profesional">
+                <div class="servicio-info">
+                    <h4>Maquillaje Profesional</h4>
+                    <p>Ideal para eventos sociales. Larga duración y acabado HD.</p>
+                    <span class="precio">Desde $800</span>
+                    <a href="#reservar" class="btn-reservar">Agendar</a>
+                </div>
+            </div>
+
+            <!-- Tarjeta de Peinados -->
+            <div id="peinados" class="servicio-item">
+                <img src="img/especiales.jpg" alt="Peinados para ocasiones especiales">
+                <div class="servicio-info">
+                    <h4>Peinados para Ocasiones Especiales</h4>
+                    <p>Recogidos, ondas glam y estilos en tendencia para tu evento.</p>
+                    <span class="precio">Desde $400</span>
+                    <a href="#reservar" class="btn-reservar">Agendar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categoría 3: Cuidado Personal (Spa) -->
+    <section class="servicio-categoria container">
+        <h3 class="categoria-titulo">Manos, Pies & Depilación</h3>
+        <div class="servicios-grid">
+            
+            <!-- Tarjeta de Pedicure -->
+            <div id="pedicure" class="servicio-item">
+                <img src="img/pedicure.jpg" alt="Pedicure Spa">
+                <div class="servicio-info">
+                    <h4>Pedicure Spa</h4>
+                    <p>Cuidado profundo, exfoliación y esmaltado para lucir unos pies perfectos.</p>
+                    <span class="precio">Desde $350</span>
+                    <a href="#reservar" class="btn-reservar">Agendar</a>
+                </div>
+            </div>
+
+            <!-- Tarjeta de Depilación -->
+            <div id="depilaciones" class="servicio-item">
+                <img src="img/depilacion.jpg" alt="Depilaciones">
+                <div class="servicio-info">
+                    <h4>Depilación</h4>
+                    <p>Técnicas suaves para el cuidado de tu piel. Ceja, bozo y más.</p>
+                    <span class="precio">Desde $100</span>
+                    <a href="#reservar" class="btn-reservar">Agendar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+<footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>YADI ESTUDIO</h4>
+                <p>Tu refugio de belleza en la ciudad.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Horarios</h4>
+                <p>Lun - Sáb: 10:00 AM - 8:00 PM</p>
+                <p>Dom: 11:00 AM - 5:00 PM</p>
+                <p>Contamos con servicio a domicilio</p>
+                <p>y citas fuera de horario sujetas a disponibilidad</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <p>WhatsApp: +52 715-305-00-47 </p>
+
+                <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                <a href="#" aria-label="Snapchat"><i class="fab fa-snapchat-ghost"></i><a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 YADI ESTUDIO. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,3 +1,5 @@
+html { scroll-behavior: smooth; }
+
 /*1. VARIABLES Y RESET*/
 :root {
     --color-bg: #FAFAFA; 
@@ -97,6 +99,10 @@ ul {
 
 .dropdown:hover .dropdown-menu {
     display: block;
+}
+
+.dropdown > a {
+    cursor: pointer;
 }
 
 .dropdown-menu li {
@@ -323,11 +329,15 @@ footer {
     .nav-links {
         display: none;
     }
-    
+
+    .nav.actions{
+        display: none;
+    }
+
     .hero-content h2 {
         font-size: 2.5rem;
     }
-    
+
     .footer-container {
         flex-direction: column;
     }

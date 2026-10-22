@@ -1,0 +1,174 @@
+/* --- BANNER DE SERVICIOS --- */
+.servicios-hero {
+    /* Fondo con un gradiente oscuro para que el texto resalte */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/salon.jpg') center/cover;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    margin-top: 80px; 
+    padding: 0 20px; 
+}
+
+.servicios-hero h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.servicios-hero p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+/* --- CATEGORÍAS Y GRID PRINCIPAL --- */
+.servicio-categoria {
+    padding: 80px 20px; 
+    margin: 0 auto;
+}
+
+.categoria-titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #222; 
+    position: relative;
+}
+
+/* Línea decorativa dorada debajo de cada título */
+.categoria-titulo::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 2px;
+    background-color: #d4af37; 
+    margin: 20px auto 0;
+}
+
+/* El sistema Grid para alinear las tarjetas */
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px; 
+}
+
+/* --- TARJETAS DE SERVICIO (HOVER EFFECTS) --- */
+.servicio-item {
+    background: #fff;
+    border-radius: 12px; 
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08); 
+    display: flex;
+    flex-direction: column;
+    transition: all 0.4s ease-in-out; 
+    scroll-margin-top: 100px; 
+    position: relative;
+}
+
+/* Efecto al pasar el ratón por la tarjeta completa */
+.servicio-item:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15); 
+}
+
+.servicio-item img {
+    width: 100%;
+    height: 280px; 
+    object-fit: cover;
+    transition: transform 0.6s ease; 
+}
+
+/* Efecto zoom suave en la imagen al pasar el ratón por la tarjeta */
+.servicio-item:hover img {
+    transform: scale(1.05);
+}
+
+.servicio-info {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; 
+    background-color: #fff; 
+    z-index: 1; 
+}
+
+.servicio-info h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    color: #111;
+}
+
+.servicio-info p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+.precio {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 20px;
+    display: block;
+    font-size: 1.05rem;
+}
+
+/* --- BOTÓN DE AGENDAR --- */
+.btn-reservar {
+    align-self: flex-start;
+    padding: 12px 25px;
+    background-color: #111; 
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 4px; 
+    transition: all 0.3s ease;
+    border: 1px solid #111; 
+}
+
+/* Efecto al pasar el ratón por el botón */
+.btn-reservar:hover {
+    background-color: #d4af37; 
+    border-color: #d4af37;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(212, 175, 55, 0.4); 
+}
+
+/* --- RESPONSIVE (MEDIA QUERIES) --- */
+/* Ajustes para móviles y tablets pequeñas */
+@media (max-width: 768px) {
+    .servicios-hero h2 {
+        font-size: 2.2rem;
+    }
+    
+    .servicios-hero p {
+        font-size: 1rem;
+    }
+
+    .categoria-titulo {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .servicios-grid {
+        gap: 25px; 
+    }
+    
+    .servicio-item img {
+        height: 220px; 
+    }
+}
